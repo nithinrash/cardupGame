@@ -6,6 +6,7 @@
     <title>CardUp</title>
 
     <style>
+
         body{
             margin:0;
             height:100vh;
@@ -14,6 +15,12 @@
             align-items:center;
             background:#111;
             font-family:Arial;
+        }
+
+        .container{
+            display:flex;
+            flex-direction:column;
+            gap:25px;
         }
 
         button{
@@ -25,25 +32,42 @@
             background:#0a84ff;
             color:white;
             font-weight:bold;
+            cursor:pointer;
         }
 
         button:active{
             transform:scale(0.97);
         }
+
     </style>
 </head>
 
 <body>
 
-<button onclick="openCardUp()">
-    OPEN CARDUP
-</button>
+<div class="container">
+
+    <button onclick="openCardUp()">
+        OPEN CARDUP
+    </button>
+
+    <button onclick="openOption2()">
+        OPTION 2
+    </button>
+
+</div>
 
 <script>
+
 function openCardUp()
 {
     window.location.href = "http://cardup.local:8000/";
 }
+
+function openOption2()
+{
+    window.location.href = "http://192.168.1.210:8000/";
+}
+
 </script>
 
 </body>
